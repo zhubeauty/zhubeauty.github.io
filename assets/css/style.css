@@ -45,11 +45,10 @@
 html { scroll-behavior: smooth; }
 
 /* 宽屏等比例放大：内容固定 1180px 宽，2K/4K 屏上会缩在中间显得很小；
-   整页 zoom 放大，排版不变，内容大约占屏幕宽度的 3/4 */
-@media (min-width: 1680px) { html { zoom: 1.12; } }
-@media (min-width: 1920px) { html { zoom: 1.25; } }
-@media (min-width: 2240px) { html { zoom: 1.4; } }
-@media (min-width: 2560px) { html { zoom: 1.6; } }
+   整页 zoom 放大，排版不变，内容大约占屏幕宽度的 60–70%（用户觉得 3/4 太冲） */
+@media (min-width: 1920px) { html { zoom: 1.1; } }
+@media (min-width: 2240px) { html { zoom: 1.2; } }
+@media (min-width: 2560px) { html { zoom: 1.3; } }
 
 body {
   margin: 0;
