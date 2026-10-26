@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>关于玩家 · 世界 Online 体验报告</title>
+  <meta name="description" content="你是自己人生游戏的设计者与主角。">
+  <meta property="og:title" content="关于玩家 · 世界 Online 体验报告">
+  <meta property="og:description" content="你是自己人生游戏的设计者与主角。">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="about">
+  <main>
+    <section class="page-hero pf-hero">
+      <div class="page-hero-word" aria-hidden="true">PLAYER</div>
+      <div class="container">
+        <div>
+          <span class="eyebrow">Area 04 · 关于玩家</span>
+          <h1>玩家档案</h1>
+          <p class="page-hero-lead">你是自己人生游戏的设计者与主角。</p>
+        </div>
+        <div class="pf-hero-mascot" aria-hidden="true">
+          <img class="sticker" src="assets/img/sticker-wink.webp" alt="">
+          <p class="pf-hero-bubble">这是一份仍在更新中的玩家档案，<br>未来还会解锁更多内容。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 玩家档案：换装列表 / 角色展示 / 状态面板 -->
+    <section class="section" style="padding-top:8px">
+      <div class="container">
+        <div class="pf" data-profile>
+          <!-- 左：角色换装 -->
+          <aside class="card pf-panel pf-outfits">
+            <h2 class="pf-panel-title">👗 角色换装</h2>
+            <div class="pf-outfit-list" data-outfit-list role="radiogroup" aria-label="选择装扮"></div>
+          </aside>
+
+          <!-- 中：角色展示 -->
+          <div class="card pf-stage">
+            <span class="tape tape-left" aria-hidden="true"></span>
+            <div class="pf-stage-head">
+              <span class="chip chip-orange" data-stage-outfit>日常玩家</span>
+              <span class="chip" data-stage-view>正面</span>
+            </div>
+            <div class="pf-stage-main">
+              <button class="pf-arrow pf-arrow-prev" type="button" data-view-prev aria-label="上一个视角">‹</button>
+              <figure class="pf-figure">
+                <img data-stage-img src="assets/img/outfits/daily-front.webp" alt="日常玩家 · 正面">
+                <p class="pf-figure-missing" data-stage-missing hidden>这个视角暂未解锁</p>
+              </figure>
+              <button class="pf-arrow pf-arrow-next" type="button" data-view-next aria-label="下一个视角">›</button>
+            </div>
+            <div class="pf-views" data-view-list role="tablist" aria-label="切换视角"></div>
+            <p class="pf-hint">↻ 点击切换视角</p>
+          </div>
+
+          <!-- 右：玩家状态 -->
+          <aside class="card pf-panel pf-status">
+            <h2 class="pf-panel-title">🎮 玩家状态</h2>
+            <div class="pf-level">
+              <span class="pf-lv">Lv.<b>99</b></span>
+              <div class="pf-exp">
+                <span class="pf-exp-label">EXP <b>999 / 1000</b></span>
+                <span class="pf-exp-bar" aria-hidden="true"><i style="width:99.9%"></i></span>
+              </div>
+            </div>
+            <dl class="pf-rows">
+              <div><dt>当前身份</dt><dd>内容创作者</dd></div>
+              <div><dt>所在服务器</dt><dd>地球 Online</dd></div>
+              <div><dt>探索状态</dt><dd><span class="pf-dot"></span>自由探索中</dd></div>
+              <div><dt>副职业</dt><dd>脑洞研究员</dd></div>
+              <div><dt>游戏风格</dt><dd>体验派 · 好奇心驱动</dd></div>
+            </dl>
+            <h3 class="pf-radar-title">能力六维图</h3>
+            <svg class="pf-radar" data-radar viewBox="0 0 320 280" role="img" aria-label="能力六维图：内容创作、逻辑思考、审美表达、学习能力、共情理解、执行落地"></svg>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- 成长路径 -->
+    <section class="section" style="padding-top:24px">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Save Points</span>
+            <h2>角色存档点</h2>
+          </div>
+          <p>每一次选择，都是让现在的我更完整的关键剧情。</p>
+        </div>
+        <div class="savepoints">
+          <div class="savepoint reveal">
+            <span class="savepoint-flag">👶</span>
+            <div class="card savepoint-card">
+              <span class="savepoint-code">SAVE 01</span>
+              <b class="savepoint-year">1997</b>
+              <h3>初始存档 · 首次登录</h3>
+              <p>玩家接入《世界 Online》，成功登陆地球服务器，角色创建完成。</p>
+            </div>
+          </div>
+          <div class="savepoint reveal">
+            <span class="savepoint-flag">🎓</span>
+            <div class="card savepoint-card">
+              <span class="savepoint-code">SAVE 02</span>
+              <b class="savepoint-year">2019</b>
+              <h3>学业副本 · 新手村通关</h3>
+              <p>课业主线全部清完，<em>【智力】</em><em>【学习】</em>基础属性阈值达标，领取毕业基础装备包，离开新手村，解锁开放大世界地图。</p>
+            </div>
+          </div>
+          <div class="savepoint reveal">
+            <span class="savepoint-flag">💼</span>
+            <div class="card savepoint-card">
+              <span class="savepoint-code">SAVE 03</span>
+              <b class="savepoint-year">2020</b>
+              <h3>主线开启 · 职场任务</h3>
+              <p>正式接入职场主线，角色面板解锁常驻数值条<em>【物质生存条】</em>。从此需要自主维护资源收支，在各类随机任务里积攒经验、解锁职业技能树。</p>
+            </div>
+          </div>
+          <div class="savepoint reveal">
+            <span class="savepoint-flag">🎬</span>
+            <div class="card savepoint-card">
+              <span class="savepoint-code">SAVE 04</span>
+              <b class="savepoint-year">2022</b>
+              <h3>副本切换 · 短视频支线解锁</h3>
+              <p>公众号支线副本圆满通关，拿下专属成就，传送至全新板块，开启短视频长线副本。</p>
+            </div>
+          </div>
+          <div class="savepoint savepoint-current reveal">
+            <span class="savepoint-flag">📍</span>
+            <div class="card savepoint-card">
+              <span class="savepoint-code">CURRENT</span>
+              <b class="savepoint-year">2026</b>
+              <h3>当前存档 · 持续攻坚</h3>
+              <p>短视频副本持续开荒刷怪，副本评价优秀，成功触发<em>【个人创业】</em>隐藏主线。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 技能树 -->
+    <section class="section" style="padding-top:24px">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">World Online · Skill Book</span>
+            <h2>玩家技能图鉴</h2>
+          </div>
+          <p>技能没有上限，只是当前最高 Lv.5。</p>
+        </div>
+
+        <!-- 属性面板：左侧分类页签，右侧技能列表 -->
+        <div class="attr reveal" data-skillbook>
+          <div class="attr-head">
+            <span class="attr-title">▶ CHARACTER<em>角色属性面板</em></span>
+            <span class="attr-max"><b>Lv.5</b>MAX LEVEL</span>
+          </div>
+          <div class="attr-body">
+            <div class="attr-tabs" data-attr-tabs role="tablist" aria-label="技能分类"></div>
+            <div class="attr-main">
+              <ul class="attr-list" data-attr-list></ul>
+              <div class="attr-locked">
+                <span class="attr-icon">🔒</span>
+                <div>
+                  <strong>✨ 隐藏技能 · 等待解锁</strong>
+                  <p>未来学会的新技能，都将成为玩家成长记录的一部分。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 当前探索方向 + 联系方式 -->
+    <section class="section" style="padding-top:24px">
+      <div class="container">
+        <!-- 多人联机：左栏介绍固定；右栏依次切换 组队大厅 → 扫码 → 申请已送达 -->
+        <div class="card lobby reveal" data-lobby>
+          <img class="sticker" src="assets/img/sticker-peace.webp" alt="" style="left:-44px; top:-40px; transform:rotate(-10deg)">
+
+          <div class="lobby-intro">
+            <div class="lobby-top">
+              <span class="eyebrow">Multiplayer Lobby</span>
+              <span class="lobby-online"><i></i>联机功能开放中</span>
+            </div>
+            <h2>加入组队</h2>
+            <p class="lobby-slogan">一个人可以探索世界，一群人可以解锁新地图。</p>
+            <p class="lobby-desc">正在寻找有趣的队友。无论是交换灵感、共同创作，还是开启一个全新的副本，都欢迎发起组队申请。</p>
+          </div>
+
+          <!-- 第一步：组队大厅 -->
+          <div class="lobby-step" data-lobby-step="party">
+            <span class="lobby-label">PARTY INFORMATION</span>
+            <div class="lobby-box">
+              <div class="lobby-leader">
+                <span class="lobby-avatar">👤</span>
+                <div>
+                  <strong>队长 · 内容创作者</strong>
+                  <small>擅长内容策划、IP 孵化、AI 创作</small>
+                </div>
+                <span class="lobby-tag is-online">在线</span>
+              </div>
+              <div class="lobby-row">
+                <span class="lobby-row-icon">👥</span>
+                <div>
+                  <strong>队伍招募中</strong>
+                  <small>创意合伙人 · 灵感交换者 · 副本共创者</small>
+                </div>
+              </div>
+              <div class="lobby-row">
+                <span class="lobby-row-icon">🗺️</span>
+                <div>
+                  <strong>可组队任务</strong>
+                  <small>内容共创 / AI 视频 / 新项目探索</small>
+                </div>
+              </div>
+            </div>
+            <button class="lobby-btn" type="button" data-lobby-go="qr">⚔️ 申请加入队伍</button>
+            <p class="lobby-foot">组队邀请已准备就绪，等待新的剧情发生。</p>
+          </div>
+
+          <!-- 第二步：扫码发送组队申请（网页没有后台，申请就是访客发出的微信好友申请） -->
+          <div class="lobby-step lobby-qr-step" data-lobby-step="qr" hidden>
+            <span class="lobby-sys is-pending">📱 SYSTEM MESSAGE · 组队通道已开启</span>
+            <h3>扫码添加队长，发送组队申请</h3>
+            <figure class="lobby-qr">
+              <img src="assets/img/qrcode.png" alt="队长的个人二维码" data-lobby-qr>
+              <span class="lobby-qr-missing" hidden>二维码待补充</span>
+            </figure>
+            <p class="lobby-desc">添加时备注「组队」，队长就知道你是从这里来的。</p>
+            <button class="lobby-btn" type="button" data-lobby-go="sent">✅ 我已发送好友申请</button>
+          </div>
+
+          <!-- 第三步：申请已送达 -->
+          <div class="lobby-step" data-lobby-step="sent" hidden>
+            <span class="lobby-sys">✅ SYSTEM MESSAGE · 申请已送达</span>
+            <h3>组队申请已送达！</h3>
+            <p class="lobby-desc">你的创意共创邀请已经发到队长的微信。</p>
+            <dl class="lobby-box lobby-info">
+              <div><dt>申请类型</dt><dd>创意共创</dd></div>
+              <div><dt>当前状态</dt><dd><span class="lobby-tag is-wait">等待队长通过</span></dd></div>
+            </dl>
+            <p class="lobby-desc">接下来就等待剧情更新吧。队长通过好友验证后，就能开始组队啦。</p>
+            <p class="lobby-quote">「新的联机剧情，正在等待触发……」</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/main.js" defer></script>
+  <script type="module" src="assets/js/about.js"></script>
+</body>
+</html>

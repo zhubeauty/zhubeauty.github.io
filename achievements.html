@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>成就档案库 · 世界 Online 体验报告</title>
+  <meta name="description" content="这里记录玩家在内容创作这条主线上的真实战绩：播放量、涨粉速度，以及从选题到发布的完整创作能力。">
+  <meta property="og:title" content="成就档案库 · 世界 Online 体验报告">
+  <meta property="og:description" content="这里记录玩家在内容创作这条主线上的真实战绩：播放量、涨粉速度，以及从选题到发布的完整创作能力。">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="achievements">
+  <main>
+    <section class="page-hero ach-hero">
+      <div class="page-hero-word" aria-hidden="true">ACHIEVEMENTS</div>
+      <div class="container">
+        <div>
+          <span class="eyebrow">Area 01 · 成就档案库</span>
+          <h1>已解锁成就 <span class="ach-hero-pad" aria-hidden="true">🎮</span></h1>
+          <p class="page-hero-lead">这里记录玩家在内容创作这条主线上的真实战绩：播放量、涨粉速度，以及从选题到发布的完整创作能力。</p>
+        </div>
+        <div class="ach-hero-mascot" aria-hidden="true">
+          <img class="sticker" src="assets/img/sticker-queen.webp" alt="">
+          <p class="ach-hero-bubble">收集更多成就<br>解锁更强的自己！</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 成就徽章墙：收藏图鉴风 -->
+    <section class="section" style="padding-top:8px">
+      <div class="container">
+        <div class="badge-wall reveal">
+          <span class="bw-tabs" aria-hidden="true"><i></i><i></i><i></i></span>
+          <div class="bw-head">
+            <img class="bw-head-icon" src="assets/img/badges/crown.png" alt="">
+            <h2>成就徽章墙</h2>
+            <span class="bw-head-en">Achievement Collection</span>
+          </div>
+
+          <div class="bw-grid">
+            <article class="bw-badge bw-legend">
+              <img class="bw-emblem" src="assets/img/badges/legend.png" alt="传说成就徽章">
+              <p class="bw-value">3<small>条</small></p>
+              <p class="bw-label">千万级播放作品</p>
+              <p class="bw-note">单条最高 <b>1500w+</b> 播放</p>
+            </article>
+
+            <article class="bw-badge bw-epic">
+              <img class="bw-emblem" src="assets/img/badges/epic.png" alt="史诗成就徽章">
+              <p class="bw-value">50<small>条+</small></p>
+              <p class="bw-label">百万级播放作品</p>
+              <p class="bw-note">50 条以上作品突破百万播放</p>
+            </article>
+
+            <article class="bw-badge bw-rare">
+              <img class="bw-emblem" src="assets/img/badges/rare.png" alt="稀有成就徽章">
+              <p class="bw-value">200<small>条+</small></p>
+              <p class="bw-label">十万级播放作品</p>
+              <p class="bw-note">200 条以上作品突破十万播放</p>
+            </article>
+
+            <article class="bw-badge bw-growth">
+              <img class="bw-emblem" src="assets/img/badges/growth.png" alt="成长成就徽章">
+              <p class="bw-value">20w+</p>
+              <p class="bw-label">单月涨粉</p>
+              <p class="bw-note">一个月内涨粉超过 20 万</p>
+            </article>
+
+            <article class="bw-badge bw-milestone">
+              <img class="bw-emblem" src="assets/img/badges/milestone.png" alt="里程碑成就徽章">
+              <p class="bw-value">60w+</p>
+              <p class="bw-label">三个月全平台累计涨粉</p>
+              <p class="bw-note">三个月内全平台累计涨粉超过 60 万</p>
+            </article>
+
+            <div class="bw-more">
+              <img src="assets/img/badges/more.png" alt="更多成就持续收集中，敬请期待！">
+            </div>
+          </div>
+
+          <span class="bw-spark" style="left:36%; top:96px" aria-hidden="true">✦</span>
+          <span class="bw-spark" style="right:31%; top:70px" aria-hidden="true">✦</span>
+          <span class="bw-spark" style="left:33%; bottom:150px" aria-hidden="true">✦</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 作品收藏册 -->
+    <section class="section" style="padding-top:24px">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Collection</span>
+            <h2>代表作品收藏册</h2>
+          </div>
+          <div class="collection-note">
+            <img class="sticker" src="assets/img/sticker-queen-wink.webp" alt="">
+            <p>这里展示的是我的部分代表作品，还有更多作品暂未收录。<br>点击卡片即可查看原作品，更多内容持续补充中。</p>
+          </div>
+        </div>
+
+        <nav class="works-nav" aria-label="作品分类" data-works-nav></nav>
+        <div data-works-sections></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/main.js" defer></script>
+  <script type="module">
+    import { WORKS, CATEGORIES } from "./assets/js/works.js";
+
+    const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+
+    // 截图类作品：只放图片，图片按原比例显示
+    const shotCard = (w, i) => {
+      const no = String(i + 1).padStart(2, "0");
+      const body = w.image
+        ? `<img src="${esc(w.image)}" alt="${esc(w.title || `数据截图 ${no}`)}" loading="lazy">`
+        : `<div class="work-shot-missing">📊 数据截图 ${no} 待补充</div>`;
+      return `<figure class="card work work-shot reveal is-in">${body}${w.title ? `<figcaption>${esc(w.title)}</figcaption>` : ""}</figure>`;
+    };
+
+    const card = (w, i) => {
+      if (w.group === "shot" || w.group === "lead") return shotCard(w, i);
+      const no = String(i + 1).padStart(2, "0");
+      // 有本地视频时直接在卡片里播放，封面作为视频的预览图
+      const cover = w.video
+        ? `<div class="work-cover"><video src="${esc(w.video)}"${w.cover ? ` poster="${esc(w.cover)}"` : ""} controls preload="none" playsinline></video></div>`
+        : w.cover
+          ? `<div class="work-cover"><img src="${esc(w.cover)}" alt="${esc(w.title)} 封面" loading="lazy"></div>`
+          : `<div class="work-cover is-missing"><span>📼<br>${w.group === "video" ? "原视频待补充" : "原始封面待补充"}</span></div>`;
+      const title = w.title ? esc(w.title) : `<span class="placeholder-text">作品 ${no} 标题</span>`;
+      const audience = w.audience ? `<span class="chip chip-audience">🎯 ${esc(w.audience)}</span>` : "";
+      const tags = w.tags.length
+        ? audience + w.tags.map((t) => `<span class="chip chip-mint">${esc(t)}</span>`).join("")
+        : audience || (w.video ? "" : `<span class="chip chip-ghost">主题待定</span>`);
+      // 只有爆款流量作品必须有播放量；其他分类没有数据就不显示这一栏
+      const plays = w.plays
+        ? `<span class="work-plays">▶ <b>${esc(w.plays)}</b>${w.likes ? `<span class="work-likes">❤ ${esc(w.likes)}</span>` : ""}</span>`
+        : w.category === "viral"
+          ? `<span class="work-plays is-pending"><b>播放量待核实</b></span>`
+          : "<span></span>";
+      // 本地视频不需要外链；账号已注销的作品也不再提示"链接待补充"
+      const link = w.url
+        ? `<a class="work-link" href="${esc(w.url)}" target="_blank" rel="noopener">看原视频 ↗</a>`
+        : w.video || w.group === "video"
+          ? ""
+          : `<span class="work-link is-disabled">链接待补充</span>`;
+      const Tag = w.url ? "a" : "article";
+      const attrs = w.url ? ` href="${esc(w.url)}" target="_blank" rel="noopener"` : "";
+      return `<${Tag} class="card work reveal is-in"${attrs}>
+          <div style="position:relative">${cover}${w.platform ? `<span class="chip ${w.platform === "小红书" ? "chip-xhs" : "chip-sun"} work-platform">${esc(w.platform)}</span>` : ""}</div>
+          <div class="work-body">
+            <p class="work-title">${title}</p>
+            <div class="work-tags">${tags}</div>
+            ${plays === "<span></span>" && !link ? "" : `<div class="work-foot">${plays}${w.url ? "" : link}</div>`}
+          </div>
+        </${Tag}>`;
+    };
+
+    // 每个分类一个分区，编号在分类内部从 01 开始
+    const sections = CATEGORIES.map((cat, n) => {
+      const list = WORKS.filter((w) => w.category === cat.id);
+      const filled = list.filter((w) => w.cover || w.title || w.image || w.video).length;
+      return { cat, n, list, filled };
+    }).filter((s) => s.list.length);
+
+    document.querySelector("[data-works-nav]").innerHTML = sections
+      .map(({ cat, filled, list }) => `<a class="works-nav-item" href="#works-${cat.id}">${esc(cat.name)}<b>${filled}/${list.length}</b></a>`)
+      .join("");
+
+    const BADGES = {
+      douyin: `<span class="platform-badge badge-douyin"><i>♪</i>抖音</span>`,
+      xhs: `<span class="platform-badge badge-xhs">小红书</span>`,
+    };
+
+    const grid = (items, ratio, cols) =>
+      `<div class="works-grid" style="--cover-ratio:${ratio}; --cols:${cols}">${items.map((w, i) => card(w, i)).join("")}</div>`;
+
+    document.querySelector("[data-works-sections]").innerHTML = sections
+      .map(({ cat, n, list }) => {
+        const body = cat.groups
+          ? cat.groups
+              .map((g) => {
+                const items = list.filter((w) => w.group === g.id);
+                return items.length
+                  ? `<h4 class="works-subhead">${esc(g.name)}</h4>${grid(items, g.ratio, g.cols)}`
+                  : "";
+              })
+              .join("")
+          : grid(list, cat.ratio, cat.cols);
+        return `
+        <section class="works-group" id="works-${cat.id}">
+          <div class="works-group-head">
+            <span class="works-group-no">0${n + 1}</span>
+            <h3>${esc(cat.name)}</h3>
+            ${cat.platform ? BADGES[cat.platform] : ""}
+            <span class="works-group-en">${esc(cat.en)}</span>
+          </div>
+          ${body}
+        </section>`;
+      })
+      .join("");
+  </script>
+</body>
+</html>
