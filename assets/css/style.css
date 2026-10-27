@@ -2721,20 +2721,12 @@ a.zone:hover .zone-icon { animation: icon-hop 0.5s ease; }
   .pf-status { display: block; }
 }
 
+/* 8 个存档点：一行 4 张，两行；每行用虚线把圆形图标串起来 */
 .savepoints {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 18px;
-}
-
-.savepoints::before {
-  content: "";
-  position: absolute;
-  left: 4%;
-  right: 4%;
-  top: 34px;
-  border-top: 3px dashed rgba(59, 47, 42, 0.25);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px 20px;
 }
 
 .savepoint {
@@ -2742,7 +2734,43 @@ a.zone:hover .zone-icon { animation: icon-hop 0.5s ease; }
   text-align: center;
 }
 
+/* 蛇形时间线：第一行 01→04 从左往右，第二行 05→CURRENT 从右往左，
+   04 和 05 之间在右侧拐弯，一条线按时间顺序串起全部存档 */
+.savepoint:nth-child(5) { grid-area: 2 / 4; }
+.savepoint:nth-child(6) { grid-area: 2 / 3; }
+.savepoint:nth-child(7) { grid-area: 2 / 2; }
+.savepoint:nth-child(8) { grid-area: 2 / 1; }
+
+/* 每张从图标中心连到下一张：第一行往右连，第二行往左连 */
+.savepoint::before {
+  content: "";
+  position: absolute;
+  top: 34px;
+  left: 50%;
+  width: calc(100% + 20px);
+  border-top: 3px dashed rgba(59, 47, 42, 0.3);
+}
+
+.savepoint:nth-child(n + 5)::before { left: auto; right: 50%; }
+.savepoint:nth-child(4)::before,
+.savepoint:last-child::before { display: none; }
+
+/* 04 → 05 的拐弯：从 04 的图标往右绕出去，再回到正下方 05 的图标 */
+.savepoint:nth-child(4)::after {
+  content: "";
+  position: absolute;
+  top: 34px;
+  left: 50%;
+  right: -30px;
+  height: calc(100% + 32px);
+  border: 3px dashed rgba(59, 47, 42, 0.3);
+  border-left: 0;
+  border-radius: 0 80px 80px 0;
+}
+
 .savepoint-flag {
+  position: relative;
+  z-index: 1;
   display: grid;
   place-items: center;
   width: 68px;
@@ -2762,7 +2790,9 @@ a.zone:hover .zone-icon { animation: icon-hop 0.5s ease; }
 
 .savepoint-card {
   flex: 1;
-  padding: 18px 16px 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 18px 16px;
 }
 
 .savepoint-code {
@@ -2786,6 +2816,13 @@ a.zone:hover .zone-icon { animation: icon-hop 0.5s ease; }
   color: var(--orange);
 }
 
+.savepoint-year small {
+  margin-left: 2px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 800;
+}
+
 .savepoint-card h3 {
   margin-bottom: 10px;
   font-size: 15px;
@@ -2805,6 +2842,31 @@ a.zone:hover .zone-icon { animation: icon-hop 0.5s ease; }
   color: var(--ink);
 }
 
+/* 每个存档的一句感悟：贴在卡片底部 */
+.savepoint-card .savepoint-quote {
+  position: relative;
+  margin-top: auto;
+  padding: 12px 0 0 16px;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.7;
+  color: var(--orange);
+}
+
+.savepoint-quote::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  top: 12px;
+}
+
+.savepoint-card p + .savepoint-quote {
+  margin-top: auto;
+  border-top: 1.5px dashed rgba(59, 47, 42, 0.16);
+}
+
+.savepoint-card > p:not(.savepoint-quote) { margin-bottom: 12px; }
+
 /* 当前存档：橙色高亮 */
 .savepoint-current .savepoint-flag { background: var(--orange); }
 .savepoint-current .savepoint-card { background: var(--orange-soft); }
@@ -2818,8 +2880,10 @@ a.zone:hover .zone-icon { animation: icon-hop 0.5s ease; }
 .savepoint-current .savepoint-year { color: var(--ink); }
 
 @media (max-width: 1100px) {
-  .savepoints { grid-template-columns: repeat(3, 1fr); row-gap: 28px; }
-  .savepoints::before { display: none; }
+  .savepoints { grid-template-columns: repeat(2, 1fr); row-gap: 28px; }
+  .savepoint:nth-child(n) { grid-area: auto; }
+  .savepoint::before,
+  .savepoint:nth-child(4)::after { display: none; }
 }
 
 @media (max-width: 760px) {
